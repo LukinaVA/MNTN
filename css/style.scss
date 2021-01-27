@@ -34,12 +34,8 @@ li {
 html {
   font-size: 13px;
 
-  //background: linear-gradient(180deg, rgba(11, 29, 38, 0) 0%, #0B1D26 61.38%),
-  //            url("../images/start-3.png") no-repeat 50% 23%,
-  //            url("../images/start-2.png") no-repeat 50% 17%,
-  //            linear-gradient(330.24deg, rgba(11, 29, 38, 0) 73%, #0B1D26 100%),
-  //            url("../images/start-1.png") top no-repeat #0B1D26;
-  //background-size: contain;
+  background: url('../images/bg.jpg') left top/cover no-repeat $green;
+  background-size: contain;
 }
 
 body {
@@ -50,7 +46,6 @@ body {
 
   color: $white;
   font-family: Gilroy, serif;
-  background: $green;
 }
 
 input,

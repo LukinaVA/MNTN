@@ -1,0 +1,141 @@
+@import "../vars";
+
+.card {
+  display: flex;
+
+  @media #{$mobile} {
+    flex-wrap: wrap;
+  }
+}
+
+.card-1,
+.card-2,
+.card-3 {
+  position: relative;
+}
+
+.card-1::before,
+.card-2::before,
+.card-3::before {
+  position: absolute;
+  top: -1rem;
+
+  content: '01';
+  font-size: 13rem;
+  opacity: 0.1;
+
+  @media #{$laptop} {
+    font-size: 10rem;
+    top: -4rem;
+  }
+}
+
+.card-2::before {
+  content: '02';
+  left: 37rem;
+
+  @media #{$laptop} {
+    left: 30rem;
+  }
+
+  @media #{$tablet} {
+    left: 26rem;
+  }
+
+  @media #{$tablet} {
+    left: 0;
+  }
+}
+
+.card-3::before {
+  content: '03';
+}
+
+.card__content {
+  margin: 7.69rem 6.26rem 7.69rem 8.24rem;
+
+  &_even {
+    margin: 7.69rem 0;
+
+    @media #{$laptop} {
+      margin: 2.6rem 0;
+    }
+
+    @media #{$mobile} {
+      order: -1;
+      margin-left: 2.6rem;
+    }
+  }
+
+  @media #{$laptop} {
+    margin: 2.6rem;
+  }
+}
+
+.card__title,
+.card__text,
+.card__link {
+  margin-top: 1.48rem;
+}
+
+.card__title {
+  font-family: "Chronicle Display", serif;
+  font-size: 3.5rem;
+
+  @media #{$laptop} {
+    font-size: 2rem;
+  }
+}
+
+.card__text {
+  line-height: 1.7;
+}
+
+.card__link {
+  display: flex;
+  align-content: center;
+  color: $yellow;
+  text-decoration: none;
+
+  transition: font-size .3s;
+
+  &:hover {
+    font-size: 1.2rem;
+  }
+}
+
+.card__img {
+  width: 31rem;
+  height: 39.5rem;
+
+  margin-bottom: 11rem;
+  object-fit: cover;
+
+  &_even {
+    object-position: 35% 50%;
+    margin-right: 14.5rem;
+
+    @media #{$laptop} {
+      margin-right: 5rem;
+    }
+  }
+
+  @media #{$laptop} {
+    width: 27.9rem;
+    height: 35.55rem;
+  }
+
+  @media #{$tablet} {
+    width: 24.8rem;
+    height: 31.6rem;
+  }
+
+  @media #{$mobile} {
+    margin-left: 2.6rem;
+  }
+
+  @media #{$mobile-sm} {
+    width: 21.7rem;
+    height: 27.65rem;
+  }
+}

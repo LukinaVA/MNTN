@@ -1,0 +1,27 @@
+.subtitle {
+  color: #FBD784;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+}
+@media (max-width: 1199px) {
+  .subtitle {
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 767px) {
+  .subtitle {
+    font-size: 0.8rem;
+  }
+}
+
+.subtitle:before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  background-color: #FBD784;
+  width: 4rem;
+  height: 0.1rem;
+  margin-right: 0.7rem;
+}
+
+/*# sourceMappingURL=subtitle.css.map */

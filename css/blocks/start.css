@@ -1,0 +1,40 @@
+.start {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50rem;
+}
+@media (max-width: 767px) {
+  .start {
+    width: 30rem;
+  }
+}
+@media (max-width: 565px) {
+  .start {
+    width: 25rem;
+  }
+}
+
+.start__title {
+  font-family: "Chronicle Display", serif;
+  font-size: 4.7rem;
+  line-height: 1.3;
+  text-transform: capitalize;
+}
+@media (max-width: 1199px) {
+  .start__title {
+    font-size: 4rem;
+  }
+}
+@media (max-width: 767px) {
+  .start__title {
+    font-size: 2.5rem;
+  }
+}
+
+.start__scroll {
+  display: flex;
+  align-content: center;
+}
+
+/*# sourceMappingURL=start.css.map */

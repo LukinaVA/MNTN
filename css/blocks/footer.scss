@@ -1,0 +1,74 @@
+@import "../vars";
+
+.footer {
+  display: flex;
+
+  @media #{$mobile-sm} {
+    flex-wrap: wrap;
+  }
+}
+
+.footer__col-1 {
+  flex-grow: 12;
+  position: relative;
+
+  @media #{$laptop} {
+    flex-grow: 5;
+  }
+
+  @media #{$mobile-sm} {
+    order: 1;
+  }
+}
+
+.footer__text {
+  margin: 1.3rem 0;
+}
+
+.footer__copyright {
+  opacity: 50%;
+  font-weight: 500;
+
+  position: absolute;
+  bottom: 0;
+
+  @media #{$mobile-sm} {
+    position: static;
+  }
+}
+
+.footer__col-2,
+.footer__col-3{
+  flex-grow: 2;
+
+  margin-bottom: 2rem;
+}
+
+.footer__subtitle {
+  display: inline-block;
+  color: $yellow;
+
+  font-size: 1.3rem;
+  margin-bottom: 1.3rem;
+}
+
+.footer__links {
+  list-style: none;
+}
+
+.footer__link {
+  display: inline-block;
+  margin-bottom: .87rem;
+
+  text-decoration: none;
+  color: inherit;
+
+  font-weight: 500;
+  font-style: normal;
+
+  transition: color .3s;
+
+  &:hover {
+    color: $yellow;
+  }
+}

@@ -1,0 +1,47 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  font-family: "Chronicle Display", serif;
+  font-size: 1.75rem;
+}
+
+.header__nav {
+  display: flex;
+
+  align-items: center;
+}
+
+.header__link {
+  padding-right: 2.2rem;
+  transition: font-size .3s;
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  &:hover {
+    font-size: 1.2rem;
+  }
+}
+
+.header__account {
+  display: flex;
+  align-items: center;
+
+  color: inherit;
+  text-decoration: none;
+
+  transition: font-size .3s;
+
+  &:hover {
+    font-size: 1.2rem;
+  }
+}
+
+.header__img {
+  padding-right: .3rem;
+}

@@ -1,0 +1,37 @@
+.scroll-box {
+  position: absolute;
+}
+.scroll-box_left {
+  top: 44%;
+  left: 4.4rem;
+}
+@media (max-width: 767px) {
+  .scroll-box_left {
+    top: 42%;
+  }
+}
+.scroll-box_right {
+  top: 40%;
+  right: 4.4rem;
+}
+@media (max-width: 767px) {
+  .scroll-box_right {
+    top: 38%;
+  }
+}
+
+.content {
+  margin: 0 8.18rem;
+}
+@media (max-width: 991px) {
+  .content {
+    margin: 0 4rem;
+  }
+}
+@media (max-width: 767px) {
+  .content {
+    margin: 0;
+  }
+}
+
+/*# sourceMappingURL=helpers.css.map */

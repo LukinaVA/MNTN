@@ -1,0 +1,51 @@
+@import "../vars";
+
+.start {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  width: 60rem;
+
+  @media #{$tablet} {
+    width: 45rem;
+  }
+
+  @media #{$mobile} {
+    width: 35rem;
+  }
+
+  @media #{$mobile-sm} {
+    width: 25rem;
+  }
+}
+
+.start__title {
+  font-family: "Chronicle Display", serif;
+  font-size: 4.7rem;
+  line-height: 1.3;
+
+  text-transform: capitalize;
+
+  @media #{$laptop} {
+    font-size: 4rem;
+  }
+
+  @media #{$mobile} {
+    font-size: 2.5rem;
+  }
+}
+
+.start__scroll {
+  display: flex;
+  align-content: center;
+
+  color: inherit;
+  text-decoration: none;
+
+  transition: font-size .3s;
+
+  &:hover {
+    font-size: 1.1rem;
+  }
+}

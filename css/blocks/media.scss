@@ -1,0 +1,19 @@
+@import "../vars";
+
+.media {
+  display: flex;
+  flex-direction: column;
+
+  @media #{$mobile-sm} {
+    display: none;
+  }
+}
+
+.media__text {
+  transform: rotate(90deg);
+  margin-bottom: 2.2rem;
+}
+
+.media__img {
+  padding-bottom: 1rem;
+}

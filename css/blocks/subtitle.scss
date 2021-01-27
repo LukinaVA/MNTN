@@ -1,0 +1,25 @@
+@import "../vars";
+
+.subtitle {
+  color: $yellow;
+  text-transform: uppercase;
+  letter-spacing: .3rem;
+
+  @media #{$laptop} {
+    font-size: .9rem;
+  }
+
+  @media #{$mobile} {
+    font-size: .8rem;
+  }
+}
+
+.subtitle:before {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  background-color: $yellow;
+  width: 4rem;
+  height: .1rem;
+  margin-right: .7rem;
+}

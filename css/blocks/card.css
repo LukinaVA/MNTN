@@ -1,0 +1,119 @@
+.card {
+  display: flex;
+}
+
+.card-1,
+.card-2,
+.card-3 {
+  position: relative;
+}
+
+.card-1::before,
+.card-2::before,
+.card-3::before {
+  position: absolute;
+  top: -1rem;
+  content: "01";
+  font-size: 13rem;
+  opacity: 0.1;
+}
+@media (max-width: 1199px) {
+  .card-1::before,
+.card-2::before,
+.card-3::before {
+    font-size: 10rem;
+    top: -4rem;
+  }
+}
+
+.card-2::before {
+  content: "02";
+  left: 37rem;
+}
+@media (max-width: 1199px) {
+  .card-2::before {
+    left: 30rem;
+  }
+}
+@media (max-width: 991px) {
+  .card-2::before {
+    left: 26rem;
+  }
+}
+
+.card-3::before {
+  content: "03";
+}
+
+.card__content {
+  margin: 7.69rem 6.26rem 7.69rem 8.24rem;
+}
+.card__content_even {
+  margin: 7.69rem 0;
+}
+@media (max-width: 1199px) {
+  .card__content_even {
+    margin: 2.6rem 0;
+  }
+}
+@media (max-width: 1199px) {
+  .card__content {
+    margin: 2.6rem;
+  }
+}
+
+.card__title,
+.card__text,
+.card__link {
+  margin-top: 1.48rem;
+}
+
+.card__title {
+  font-family: "Chronicle Display", serif;
+  font-size: 3.5rem;
+}
+@media (max-width: 1199px) {
+  .card__title {
+    font-size: 2rem;
+  }
+}
+
+.card__text {
+  line-height: 1.7;
+}
+
+.card__link {
+  display: flex;
+  align-content: center;
+  color: #FBD784;
+}
+
+.card__img {
+  width: 31rem;
+  height: 39.5rem;
+  margin-bottom: 11rem;
+  object-fit: cover;
+}
+.card__img_even {
+  object-position: 35% 50%;
+  margin-right: 14.5rem;
+}
+@media (max-width: 1199px) {
+  .card__img_even {
+    margin-right: 5rem;
+  }
+}
+@media (max-width: 1199px) {
+  .card__img {
+    width: 27.9rem;
+    height: 35.55rem;
+  }
+}
+@media (max-width: 991px) {
+  .card__img {
+    width: 24.8rem;
+    height: 31.6rem;
+  }
+}
+
+/*# sourceMappingURL=card.css.map */

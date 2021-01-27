@@ -1,0 +1,19 @@
+.slider {
+  display: flex;
+  flex-direction: column;
+  padding-right: 1.75rem;
+  border-right: 2px solid #fff;
+}
+@media (max-width: 565px) {
+  .slider {
+    display: none;
+  }
+}
+
+.slider__link {
+  text-decoration: none;
+  color: inherit;
+  margin-bottom: 2.2rem;
+}
+
+/*# sourceMappingURL=slider.css.map */

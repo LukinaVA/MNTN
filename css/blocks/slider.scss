@@ -1,0 +1,22 @@
+@import "../vars";
+
+.slider {
+  display: flex;
+  flex-direction: column;
+
+  padding-right: 1.75rem;
+  border-right: 2px solid $white;
+}
+
+.slider__link {
+  text-decoration: none;
+  color: inherit;
+
+  margin-bottom: 2.2rem;
+
+  transition: font-size .3s;
+
+  &:hover {
+    font-size: 1.2rem;
+  }
+}

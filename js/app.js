@@ -18,4 +18,14 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
     })
 })
 
+$(document).ready(function () {
+    let media = $('.media');
+    let slider = $('.slider');
+
+    $(window).scroll(function() {
+        media.stop().animate({marginTop: $(window).scrollTop()});
+        slider.stop().animate({marginTop: $(window).scrollTop()});
+    });
+});
+
 

@@ -8,6 +8,14 @@
   margin: 10rem auto 40rem;
   padding: 0 5rem;
 
+  @media #{$laptop} {
+    margin-bottom: 30rem;
+  }
+
+  @media #{$tablet} {
+    margin-bottom: 19rem;
+  }
+
   @media #{$mobile-sm} {
     padding: 0;
   }
@@ -22,7 +30,7 @@
 }
 
 .scroll-box {
-  position: fixed;
+  position: absolute;
 
   &_left {
     top: 44%;

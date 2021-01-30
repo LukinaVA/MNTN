@@ -24,8 +24,16 @@
   font-family: "Chronicle Display", serif;
   font-size: 4.7rem;
   line-height: 1.3;
-
   text-transform: capitalize;
+
+  transform: translate(0, 120%);
+  opacity: 0;
+  transition: all .8s ease 0s;
+
+  &.active {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
 
   @media #{$laptop} {
     font-size: 4rem;
@@ -43,9 +51,12 @@
   color: inherit;
   text-decoration: none;
 
-  transition: font-size .3s;
+  transform: translate(0, 120%);
+  opacity: 0;
+  transition: all .8s ease .5s;
 
-  &:hover {
-    font-size: 1.1rem;
+  &.active {
+    transform: translate(0, 0);
+    opacity: 1;
   }
 }

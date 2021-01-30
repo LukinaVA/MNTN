@@ -66,9 +66,10 @@
   font-weight: 500;
   font-style: normal;
 
-  transition: color .3s;
+  transition: all .3s ease 0s;
 
   &:hover {
     color: $yellow;
+    transform: scale(1.1);
   }
 }

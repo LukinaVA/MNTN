@@ -5,6 +5,19 @@
   text-transform: uppercase;
   letter-spacing: .3rem;
 
+  transform: translate(0, -120%);
+  opacity: 0;
+  transition: all .8s ease 0s;
+
+  :not(:first-child) {
+    transform: translate(-100%, 0);
+  }
+
+  &.active {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+
   @media #{$laptop} {
     font-size: .9rem;
   }

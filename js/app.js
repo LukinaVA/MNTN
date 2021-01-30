@@ -18,6 +18,43 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
     })
 })
 
+const animatedElements = document.querySelectorAll('.animated-element');
+
+if (animatedElements.length > 0) {
+    window.addEventListener('scroll', animateOnScroll);
+    function animateOnScroll() {
+        animatedElements.forEach(elem => {
+            const elemHeight = elem.offsetHeight;
+            const elemTop = offset(elem).top;
+            const animationFactor = 4;
+
+            let startPoint = window.innerHeight - elemHeight / animationFactor;
+            if (elemHeight > window.innerHeight) {
+                startPoint = window.innerHeight - window.innerHeight / animationFactor;
+            }
+
+            if ((pageYOffset > (elemTop - startPoint)) && (pageYOffset < (elemTop + elemHeight))) {
+                elem.classList.add('active');
+            } else {
+                if (!elem.classList.contains('anim-no-hide')) {
+                    elem.classList.remove('active');
+                }
+            }
+        })
+    }
+
+    setTimeout(animateOnScroll, 300);
+}
+
+function offset(elem) {
+    const rect = elem.getBoundingClientRect();
+    const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    return {top: rect.top + scrollTop, left: rect.left + scrollLeft};
+}
+
+// JQuery
 $(document).ready(function () {
     let media = $('.media');
     let slider = $('.slider');

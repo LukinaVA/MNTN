@@ -2,6 +2,7 @@
 
 .card {
   display: flex;
+  padding: 0 12.58rem;
 
   transform: translate(-100%, 0);
   opacity: 0;
@@ -41,7 +42,7 @@
 
 .card-2::before {
   content: '02';
-  left: 37rem;
+  left: 50rem;
 
   @media #{$laptop} {
     left: 30rem;
@@ -93,7 +94,7 @@
 
   transform: translate(-100%, 0);
   opacity: 0;
-  transition: all ease .5s .2s;
+  transition: all ease .8s .2s;
 
   &.active {
     transform: translate(0, 0);
@@ -110,7 +111,7 @@
 
   transform: translate(-100%, 0);
   opacity: 0;
-  transition: all ease .5s .4s;
+  transition: all ease .8s .4s;
 
   &.active {
     transform: translate(0, 0);
@@ -126,7 +127,7 @@
 
   transform: translate(-100%, 0);
   opacity: 0;
-  transition: all ease .5s .5s;
+  transition: all ease .8s .4s;
 
   &.active {
     transform: translate(0, 0);

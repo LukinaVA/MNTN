@@ -17,4 +17,10 @@
 
 .media__img {
   padding-bottom: 1rem;
+
+  transition: all .3s ease 0s;
+
+  &:hover {
+    transform: scale(1.2);
+  }
 }

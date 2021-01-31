@@ -42,28 +42,11 @@ li {
   margin: 0;
 }
 
-::-webkit-scrollbar {
-  width: 2px;
-}
-
-::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.5);
-}
-
-::-webkit-scrollbar-thumb {
-  background: #fff;
-}
-
 html {
   font-size: 13px;
-  background: url("../images/bg.jpg") left top/cover no-repeat #0B1D26;
-  background-size: contain;
 }
 
 body {
-  min-height: 100vh;
-  scroll-behavior: smooth;
-  text-rendering: optimizeSpeed;
   line-height: 1.5;
   color: #fff;
   font-family: Gilroy, serif;
@@ -79,6 +62,63 @@ select {
 :focus,
 :active {
   outline: none;
+}
+
+.page {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  background: url("../../images/bg.jpg") left top/cover no-repeat #0B1D26;
+  background-size: contain;
+}
+
+.page__wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.page__screen {
+  padding: 3.5rem 4.3rem;
+}
+
+.page__pagination {
+  position: absolute;
+  top: 50%;
+  right: 6.5rem;
+  transform: translate(0, -50%);
+  display: flex;
+  flex-direction: column;
+}
+
+.page__bullet {
+  cursor: pointer;
+  margin-bottom: 2.19rem;
+  transition: all 0.3s ease 0s;
+}
+
+.page__bullet_active {
+  transform: scale(1.2);
+}
+
+.page__scroll {
+  position: absolute;
+  top: 50%;
+  right: 4.3rem;
+  transform: translate(0, -50%);
+  width: 3px;
+  height: 30%;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.page__drag-scroll {
+  width: 100%;
+  background: #fff;
+  cursor: pointer;
 }
 
 .subtitle {
@@ -134,14 +174,14 @@ select {
 
 .header__link {
   padding-right: 2.2rem;
-  transition: font-size 0.3s;
+  transition: all 0.3s ease 0s;
 }
 .header__link a {
   text-decoration: none;
   color: inherit;
 }
 .header__link:hover {
-  font-size: 1.2rem;
+  transform: scale(1.2);
 }
 
 .header__account {
@@ -149,7 +189,10 @@ select {
   align-items: center;
   color: inherit;
   text-decoration: none;
-  transition: font-size 0.3s;
+  transition: all 0.3s ease 0s;
+}
+.header__account:hover {
+  transform: scale(1.2);
 }
 
 .header__img {
@@ -234,25 +277,15 @@ select {
 
 .media__img {
   padding-bottom: 1rem;
+  transition: all 0.3s ease 0s;
 }
-
-.slider {
-  display: flex;
-  flex-direction: column;
-}
-
-.slider__link {
-  text-decoration: none;
-  color: inherit;
-  margin-bottom: 2.2rem;
-  transition: color 0.3s;
-}
-.slider__link:hover {
-  color: #FBD784;
+.media__img:hover {
+  transform: scale(1.2);
 }
 
 .card {
   display: flex;
+  padding: 0 12.58rem;
   transform: translate(-100%, 0);
   opacity: 0;
   transition: all 0.8s ease 0s;
@@ -293,7 +326,7 @@ select {
 
 .card-2::before {
   content: "02";
-  left: 37rem;
+  left: 50rem;
 }
 @media (max-width: 1199px) {
   .card-2::before {
@@ -349,7 +382,7 @@ select {
   font-size: 3.5rem;
   transform: translate(-100%, 0);
   opacity: 0;
-  transition: all ease 0.5s 0.2s;
+  transition: all ease 0.8s 0.2s;
 }
 .card__title.active {
   transform: translate(0, 0);
@@ -365,7 +398,7 @@ select {
   line-height: 1.7;
   transform: translate(-100%, 0);
   opacity: 0;
-  transition: all ease 0.5s 0.4s;
+  transition: all ease 0.8s 0.4s;
 }
 .card__text.active {
   transform: translate(0, 0);
@@ -379,7 +412,7 @@ select {
   text-decoration: none;
   transform: translate(-100%, 0);
   opacity: 0;
-  transition: all ease 0.5s 0.5s;
+  transition: all ease 0.8s 0.4s;
 }
 .card__link.active {
   transform: translate(0, 0);
@@ -496,10 +529,6 @@ select {
   transform: scale(1.1);
 }
 
-.wrapper {
-  margin: 3.5rem 4.3rem;
-}
-
 .central-block {
   margin: 10rem auto 40rem;
   padding: 0 5rem;
@@ -529,58 +558,15 @@ select {
 }
 
 .scroll-box {
-  position: absolute;
-}
-.scroll-box_left {
-  top: 44%;
-  left: 4.4rem;
-}
-@media (max-width: 1199px) {
-  .scroll-box_left {
-    left: 2rem;
-  }
-}
-@media (max-width: 991px) {
-  .scroll-box_left {
-    left: 1rem;
-  }
-}
-.scroll-box_right {
-  top: 40%;
-  right: 4.4rem;
-}
-@media (max-width: 1199px) {
-  .scroll-box_right {
-    right: 2rem;
-  }
-}
-@media (max-width: 991px) {
-  .scroll-box_right {
-    right: 1rem;
-  }
+  position: fixed;
+  top: 50%;
+  left: 4.3rem;
+  transform: translate(0, -50%);
+  z-index: 100;
 }
 @media (max-width: 767px) {
   .scroll-box {
     display: none;
-  }
-}
-
-.content {
-  margin: 0 8.18rem;
-}
-@media (max-width: 1199px) {
-  .content {
-    margin: 0 4rem;
-  }
-}
-@media (max-width: 991px) {
-  .content {
-    margin: 0 2rem;
-  }
-}
-@media (max-width: 767px) {
-  .content {
-    margin: 0;
   }
 }
 

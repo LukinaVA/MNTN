@@ -31,31 +31,15 @@ li {
   margin: 0;
 }
 
-::-webkit-scrollbar {
-  width: 2px;
-}
-
-::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.5);
-}
-
-::-webkit-scrollbar-thumb {
-  background: $white;
-}
-
 html {
   font-size: 13px;
 
-  background: url('../images/bg.jpg') left top/cover no-repeat $green;
-  background-size: contain;
+  //background: url('../images/bg.jpg') left top/cover no-repeat $green;
+  //background-size: contain;
 }
 
 body {
-  min-height: 100vh;
-  scroll-behavior: smooth;
-  text-rendering: optimizeSpeed;
   line-height: 1.5;
-
   color: $white;
   font-family: Gilroy, serif;
 }
@@ -72,11 +56,12 @@ select {
   outline: none;
 }
 
+@import "blocks/page";
 @import "blocks/subtitle";
 @import "blocks/header";
 @import "blocks/start";
 @import "blocks/media";
-@import "blocks/slider";
+//@import "blocks/slider";
 @import "blocks/card";
 @import "blocks/footer";
 

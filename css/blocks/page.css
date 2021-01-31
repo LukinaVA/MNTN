@@ -1,0 +1,42 @@
+.page {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.page__wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.page__pagination {
+  position: absolute;
+  top: 50%;
+  right: 50px;
+  transform: translate(0, -50%);
+  display: flex;
+  flex-direction: column;
+}
+
+.page__scroll {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translate(0, -50%);
+  width: 4px;
+  height: 30%;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.page__drag-scroll {
+  width: 100%;
+  background: #fff;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=page.css.map */

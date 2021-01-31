@@ -10,21 +10,21 @@
 
 .header__nav {
   display: flex;
-
   align-items: center;
 }
 
 .header__link {
   padding-right: 2.2rem;
-  transition: font-size .3s;
 
   a {
     text-decoration: none;
     color: inherit;
   }
 
+  transition: all .3s ease 0s;
+
   &:hover {
-    font-size: 1.2rem;
+    transform: scale(1.2);
   }
 }
 
@@ -35,7 +35,11 @@
   color: inherit;
   text-decoration: none;
 
-  transition: font-size .3s;
+  transition: all .3s ease 0s;
+
+  &:hover {
+    transform: scale(1.2);
+  }
 }
 
 .header__img {

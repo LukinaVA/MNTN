@@ -1,68 +1,61 @@
-document.querySelectorAll('a[href^="#"]').forEach(link => {
+let pageSlider = new Swiper('.page', {
+    wrapperClass: 'page__wrapper',
+    slideClass: 'page__screen',
 
-    link.addEventListener('click', function (e) {
-        e.preventDefault();
+    direction: 'vertical',
 
-        let href = this.getAttribute('href').substring(1);
+    slidesPerView: 'auto',
 
-        const scrollTarget = document.getElementById(href);
+    keyboard: {
+        enabled: true,
+        onlyInViewport: true,
+        pageUpDown: true,
+    },
 
-        const topOffset = document.querySelector('.scroll-box_right').offsetHeight * 0.4;
-        const elementPosition = scrollTarget.getBoundingClientRect().top;
-        const offsetPosition = elementPosition - topOffset;
+    mousewheel: {
+        sensitivity: 1,
+    },
 
-        window.scrollBy({
-            top: offsetPosition,
-            behavior: 'smooth'
-        })
-    })
-})
+    watchOverflow: true,
+    speed: 700,
 
-const animatedElements = document.querySelectorAll('.animated-element');
+    observer: true,
+    observeParents: true,
+    observeSlideChildren: true,
 
-if (animatedElements.length > 0) {
-    window.addEventListener('scroll', animateOnScroll);
-    function animateOnScroll() {
-        animatedElements.forEach(elem => {
-            const elemHeight = elem.offsetHeight;
-            const elemTop = offset(elem).top;
-            const animationFactor = 4;
-
-            let startPoint = window.innerHeight - elemHeight / animationFactor;
-            if (elemHeight > window.innerHeight) {
-                startPoint = window.innerHeight - window.innerHeight / animationFactor;
+    pagination: {
+        el: '.page__pagination',
+        type: 'bullets',
+        clickable: true,
+        bulletClass: 'page__bullet',
+        bulletActiveClass: 'page__bullet_active',
+        renderBullet: function (index, className) {
+            if (index === 0) {
+                return '<span class="'+ className +'"> Start </span>';
             }
-
-            if ((pageYOffset > (elemTop - startPoint)) && (pageYOffset < (elemTop + elemHeight))) {
-                elem.classList.add('active');
-            } else {
-                if (!elem.classList.contains('anim-no-hide')) {
-                    elem.classList.remove('active');
-                }
+            if (index === 4) {
+                return '<span></span>';
             }
-        })
-    }
+            return '<span class="'+ className +'"> ' + '0' + index + ' </span>';
+        }
+    },
 
-    setTimeout(animateOnScroll, 300);
-}
-
-function offset(elem) {
-    const rect = elem.getBoundingClientRect();
-    const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-    return {top: rect.top + scrollTop, left: rect.left + scrollLeft};
-}
-
-// JQuery
-$(document).ready(function () {
-    let media = $('.media');
-    let slider = $('.slider');
-
-    $(window).scroll(function() {
-        media.stop().animate({marginTop: $(window).scrollTop()});
-        slider.stop().animate({marginTop: $(window).scrollTop()});
-    });
+    scrollbar: {
+        el: '.page__scroll',
+        dragClass: 'page__drag-scroll',
+        draggable: true
+    },
 });
 
+pageSlider.on('slideChangeTransitionEnd', animateScroll);
 
+function animateScroll() {
+    const activeSlide = document.documentElement.querySelector('.swiper-slide-active');
+
+    const animatedElements = activeSlide.querySelectorAll('.animated-element');
+    animatedElements.forEach(elem => {
+        elem.classList.add('active');
+    })
+}
+
+setTimeout(animateScroll, 300);

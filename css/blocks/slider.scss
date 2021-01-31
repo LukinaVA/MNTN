@@ -1,22 +1,16 @@
-@import "../vars";
-
-.slider {
-  display: flex;
-  flex-direction: column;
-
-  //padding-right: 1.75rem;
-  //border-right: 2px solid rgba(255, 255, 255, 0.5);
-}
-
-.slider__link {
-  text-decoration: none;
-  color: inherit;
-
-  margin-bottom: 2.2rem;
-
-  transition: color .3s;
-
-  &:hover {
-    color: $yellow;
-  }
-}
+//@import "../vars";
+//
+//.slider {
+//  display: flex;
+//  flex-direction: column;
+//
+//  //padding-right: 1.75rem;
+//  //border-right: 2px solid rgba(255, 255, 255, 0.5);
+//}
+//
+//.slider__link {
+//  text-decoration: none;
+//  color: inherit;
+//
+//  margin-bottom: 2.2rem;
+//}

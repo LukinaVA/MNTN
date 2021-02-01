@@ -33,15 +33,13 @@ li {
 
 html {
   font-size: 13px;
-
-  //background: url('../images/bg.jpg') left top/cover no-repeat $green;
-  //background-size: contain;
 }
 
 body {
   line-height: 1.5;
   color: $white;
   font-family: Gilroy, serif;
+  background: $green;
 }
 
 input,
@@ -61,7 +59,6 @@ select {
 @import "blocks/header";
 @import "blocks/start";
 @import "blocks/media";
-//@import "blocks/slider";
 @import "blocks/card";
 @import "blocks/footer";
 

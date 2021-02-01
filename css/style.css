@@ -50,6 +50,7 @@ body {
   line-height: 1.5;
   color: #fff;
   font-family: Gilroy, serif;
+  background: #0B1D26;
 }
 
 input,
@@ -71,8 +72,6 @@ select {
   top: 0;
   left: 0;
   overflow: hidden;
-  background: url("../../images/bg.jpg") left top/cover no-repeat #0B1D26;
-  background-size: contain;
 }
 
 .page__wrapper {
@@ -83,7 +82,32 @@ select {
 }
 
 .page__screen {
-  padding: 3.5rem 4.3rem;
+  flex: 1 0 100%;
+  padding: 0 4.3rem;
+}
+.page__screen:first-child {
+  padding-top: 3.5rem;
+}
+@media (max-width: 767px) {
+  .page__screen:first-child {
+    padding-top: 1rem;
+  }
+}
+.page__screen:last-child {
+  flex: 1 0;
+}
+@media (max-width: 767px) {
+  .page__screen {
+    padding: 0 2rem;
+  }
+}
+
+.page__image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
 }
 
 .page__pagination {
@@ -94,11 +118,26 @@ select {
   display: flex;
   flex-direction: column;
 }
+@media (max-width: 991px) {
+  .page__pagination {
+    right: 4.5rem;
+  }
+}
+@media (max-width: 565px) {
+  .page__pagination {
+    right: 3.5rem;
+  }
+}
 
 .page__bullet {
   cursor: pointer;
   margin-bottom: 2.19rem;
   transition: all 0.3s ease 0s;
+}
+@media (max-width: 767px) {
+  .page__bullet {
+    font-size: 0.9rem;
+  }
 }
 
 .page__bullet_active {
@@ -113,6 +152,16 @@ select {
   width: 3px;
   height: 30%;
   background: rgba(255, 255, 255, 0.5);
+}
+@media (max-width: 991px) {
+  .page__scroll {
+    right: 3.3rem;
+  }
+}
+@media (max-width: 565px) {
+  .page__scroll {
+    right: 2.3rem;
+  }
 }
 
 .page__drag-scroll {
@@ -239,6 +288,11 @@ select {
     font-size: 4rem;
   }
 }
+@media (max-width: 991px) {
+  .start__title {
+    font-size: 3rem;
+  }
+}
 @media (max-width: 767px) {
   .start__title {
     font-size: 2.5rem;
@@ -285,18 +339,37 @@ select {
 
 .card {
   display: flex;
-  padding: 0 12.58rem;
-  transform: translate(-100%, 0);
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  padding: 0 12rem;
   opacity: 0;
+  transform: translate(-100%, 0);
   transition: all 0.8s ease 0s;
 }
 .card.active {
   transform: translate(0, 0);
   opacity: 1;
 }
+@media (max-width: 1199px) {
+  .card {
+    padding: 0 10rem;
+  }
+}
+@media (max-width: 991px) {
+  .card {
+    padding: 0 6rem;
+  }
+}
 @media (max-width: 767px) {
   .card {
+    padding: 0 4rem;
     flex-wrap: wrap;
+  }
+}
+@media (max-width: 565px) {
+  .card {
+    padding: 0 2rem;
   }
 }
 
@@ -310,7 +383,7 @@ select {
 .card-2::before,
 .card-3::before {
   position: absolute;
-  top: -1rem;
+  top: 2rem;
   content: "01";
   font-size: 13rem;
   opacity: 0.1;
@@ -319,8 +392,17 @@ select {
   .card-1::before,
 .card-2::before,
 .card-3::before {
-    font-size: 10rem;
-    top: -4rem;
+    font-size: 11rem;
+    top: 8rem;
+    left: 9rem;
+  }
+}
+@media (max-width: 767px) {
+  .card-1::before,
+.card-2::before,
+.card-3::before {
+    top: -3rem;
+    left: 4rem;
   }
 }
 
@@ -330,17 +412,19 @@ select {
 }
 @media (max-width: 1199px) {
   .card-2::before {
-    left: 30rem;
+    left: 40rem;
+    top: 6rem;
   }
 }
 @media (max-width: 991px) {
   .card-2::before {
-    left: 26rem;
+    left: 32rem;
   }
 }
-@media (max-width: 991px) {
+@media (max-width: 767px) {
   .card-2::before {
-    left: 0;
+    top: -3rem;
+    left: 4rem;
   }
 }
 
@@ -368,6 +452,11 @@ select {
 @media (max-width: 1199px) {
   .card__content {
     margin: 2.6rem;
+  }
+}
+@media (max-width: 991px) {
+  .card__content {
+    margin: 1.6rem;
   }
 }
 
@@ -420,9 +509,9 @@ select {
 }
 
 .card__img {
+  display: block;
   width: 31rem;
   height: 39.5rem;
-  margin-bottom: 11rem;
   object-fit: cover;
 }
 .card__img_even {
@@ -460,9 +549,16 @@ select {
 
 .footer {
   display: flex;
+  padding: 0 12rem;
+}
+@media (max-width: 991px) {
+  .footer {
+    padding: 0 8rem;
+  }
 }
 @media (max-width: 565px) {
   .footer {
+    padding: 5rem 5rem 0;
     flex-wrap: wrap;
   }
 }
@@ -535,12 +631,17 @@ select {
 }
 @media (max-width: 1199px) {
   .central-block {
-    margin-bottom: 30rem;
+    margin-bottom: 35rem;
   }
 }
 @media (max-width: 991px) {
   .central-block {
-    margin-bottom: 19rem;
+    margin-bottom: 50rem;
+  }
+}
+@media (max-width: 767px) {
+  .central-block {
+    margin-top: 13rem;
   }
 }
 @media (max-width: 565px) {
@@ -563,6 +664,11 @@ select {
   left: 4.3rem;
   transform: translate(0, -50%);
   z-index: 100;
+}
+@media (max-width: 991px) {
+  .scroll-box {
+    left: 3.3rem;
+  }
 }
 @media (max-width: 767px) {
   .scroll-box {

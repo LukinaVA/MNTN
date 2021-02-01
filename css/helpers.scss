@@ -1,21 +1,19 @@
 @import "vars";
 
-//.wrapper {
-//  padding: 3.5rem 4.3rem;
-//
-//  min-height: 100%;
-//}
-
 .central-block {
   margin: 10rem auto 40rem;
   padding: 0 5rem;
 
   @media #{$laptop} {
-    margin-bottom: 30rem;
+    margin-bottom: 35rem;
   }
 
   @media #{$tablet} {
-    margin-bottom: 19rem;
+    margin-bottom: 50rem;
+  }
+
+  @media #{$mobile} {
+    margin-top: 13rem;
   }
 
   @media #{$mobile-sm} {
@@ -39,50 +37,11 @@
 
   z-index: 100;
 
-  //&_left {
-  //  top: 44%;
-  //  left: 4.4rem;
-  //
-  //  @media #{$laptop} {
-  //    left: 2rem;
-  //  }
-  //
-  //  @media #{$tablet} {
-  //    left: 1rem;
-  //  }
-  //
-  //}
-
-  //&_right {
-  //  top: 40%;
-  //  right: 4.4rem;
-  //
-  //  @media #{$laptop} {
-  //    right: 2rem;
-  //  }
-  //
-  //  @media #{$tablet} {
-  //    right: 1rem;
-  //  }
-  //}
+  @media #{$tablet} {
+    left: 3.3rem;
+  }
 
   @media #{$mobile} {
     display: none;
   }
 }
-
-//.content {
-//  margin: 0 8.18rem;
-//
-//  @media #{$laptop} {
-//    margin: 0 4rem;
-//  }
-//
-//  @media #{$tablet} {
-//    margin: 0 2rem;
-//  }
-//
-//  @media #{$mobile} {
-//    margin: 0;
-//  }
-//}

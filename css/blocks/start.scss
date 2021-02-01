@@ -39,6 +39,10 @@
     font-size: 4rem;
   }
 
+  @media #{$tablet} {
+    font-size: 3rem;
+  }
+
   @media #{$mobile} {
     font-size: 2.5rem;
   }

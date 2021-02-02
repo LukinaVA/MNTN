@@ -174,16 +174,16 @@ select {
   color: #FBD784;
   text-transform: uppercase;
   letter-spacing: 0.3rem;
-  transform: translate(0, -120%);
   opacity: 0;
+  transform: translate(0, -120%);
   transition: all 0.8s ease 0s;
 }
 .subtitle :not(:first-child) {
   transform: translate(-100%, 0);
 }
 .subtitle.active {
-  transform: translate(0, 0);
   opacity: 1;
+  transform: translate(0, 0);
 }
 @media (max-width: 1199px) {
   .subtitle {
@@ -252,21 +252,22 @@ select {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 60rem;
+  max-width: 60rem;
+  width: 100%;
 }
 @media (max-width: 991px) {
   .start {
-    width: 45rem;
+    max-width: 45rem;
   }
 }
 @media (max-width: 767px) {
   .start {
-    width: 35rem;
+    max-width: 35rem;
   }
 }
 @media (max-width: 565px) {
   .start {
-    width: 25rem;
+    max-width: 25rem;
   }
 }
 
@@ -275,13 +276,14 @@ select {
   font-size: 4.7rem;
   line-height: 1.3;
   text-transform: capitalize;
-  transform: translate(0, 120%);
+  margin-top: 1.75rem;
   opacity: 0;
+  transform: translate(0, 120%);
   transition: all 0.8s ease 0s;
 }
 .start__title.active {
-  transform: translate(0, 0);
   opacity: 1;
+  transform: translate(0, 0);
 }
 @media (max-width: 1199px) {
   .start__title {
@@ -304,13 +306,14 @@ select {
   align-content: center;
   color: inherit;
   text-decoration: none;
-  transform: translate(0, 120%);
+  margin-top: 1.75rem;
   opacity: 0;
+  transform: translate(0, 120%);
   transition: all 0.8s ease 0.5s;
 }
 .start__scroll.active {
-  transform: translate(0, 0);
   opacity: 1;
+  transform: translate(0, 0);
 }
 
 .media {
@@ -348,8 +351,8 @@ select {
   transition: all 0.8s ease 0s;
 }
 .card.active {
-  transform: translate(0, 0);
   opacity: 1;
+  transform: translate(0, 0);
 }
 @media (max-width: 1199px) {
   .card {
@@ -412,8 +415,8 @@ select {
 }
 @media (max-width: 1199px) {
   .card-2::before {
-    left: 40rem;
     top: 6rem;
+    left: 40rem;
   }
 }
 @media (max-width: 991px) {
@@ -469,13 +472,13 @@ select {
 .card__title {
   font-family: "Chronicle Display", serif;
   font-size: 3.5rem;
-  transform: translate(-100%, 0);
   opacity: 0;
+  transform: translate(-100%, 0);
   transition: all ease 0.8s 0.2s;
 }
 .card__title.active {
-  transform: translate(0, 0);
   opacity: 1;
+  transform: translate(0, 0);
 }
 @media (max-width: 1199px) {
   .card__title {
@@ -485,13 +488,13 @@ select {
 
 .card__text {
   line-height: 1.7;
-  transform: translate(-100%, 0);
   opacity: 0;
+  transform: translate(-100%, 0);
   transition: all ease 0.8s 0.4s;
 }
 .card__text.active {
-  transform: translate(0, 0);
   opacity: 1;
+  transform: translate(0, 0);
 }
 
 .card__link {
@@ -499,13 +502,13 @@ select {
   align-content: center;
   color: #FBD784;
   text-decoration: none;
-  transform: translate(-100%, 0);
   opacity: 0;
+  transform: translate(-100%, 0);
   transition: all ease 0.8s 0.4s;
 }
 .card__link.active {
-  transform: translate(0, 0);
   opacity: 1;
+  transform: translate(0, 0);
 }
 
 .card__img {
@@ -556,7 +559,7 @@ select {
     padding: 0 8rem;
   }
 }
-@media (max-width: 565px) {
+@media (max-width: 767px) {
   .footer {
     padding: 5rem 5rem 0;
     flex-wrap: wrap;
@@ -650,10 +653,6 @@ select {
   }
 }
 
-.margin-top {
-  margin-top: 1.75rem;
-}
-
 .arrow {
   padding-left: 0.9rem;
 }
@@ -676,4 +675,3 @@ select {
   }
 }
 
-/*# sourceMappingURL=style.css.map */

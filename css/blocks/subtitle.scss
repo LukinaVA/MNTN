@@ -5,8 +5,8 @@
   text-transform: uppercase;
   letter-spacing: .3rem;
 
-  transform: translate(0, -120%);
   opacity: 0;
+  transform: translate(0, -120%);
   transition: all .8s ease 0s;
 
   :not(:first-child) {
@@ -14,8 +14,8 @@
   }
 
   &.active {
-    transform: translate(0, 0);
     opacity: 1;
+    transform: translate(0, 0);
   }
 
   @media #{$laptop} {

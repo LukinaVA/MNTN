@@ -4,6 +4,10 @@
   margin: 10rem auto 40rem;
   padding: 0 5rem;
 
+  @media #{$laptop-xx} {
+    margin-top: 22rem;
+  }
+
   @media #{$laptop} {
     margin-bottom: 35rem;
   }

@@ -3,7 +3,12 @@
 .card {
   display: flex;
 
+  //margin: 0 auto;
+
+  //max-width: 113rem;
   width: 100%;
+
+  //max-height: 56rem;
   height: 100%;
 
   align-items: center;
@@ -36,54 +41,24 @@
   }
 }
 
-.card-1,
-.card-2,
-.card-3 {
-  position: relative;
-}
-
-.card-1::before,
-.card-2::before,
-.card-3::before {
+.card__title-1::before,
+.card__title-2::before,
+.card__title-3::before {
   position: absolute;
-  top: 2rem;
+  top: -12rem;
+  left: -5rem;
 
+  font-family: Gilroy, serif;
   content: '01';
   font-size: 13rem;
   opacity: 0.1;
-
-  @media #{$laptop} {
-    font-size: 11rem;
-    top: 8rem;
-    left: 9rem;
-  }
-
-  @media #{$mobile} {
-    top: -3rem;
-    left: 4rem;
-  }
 }
 
-.card-2::before {
+.card__title-2::before {
   content: '02';
-  left: 50rem;
-
-  @media #{$laptop} {
-    top: 6rem;
-    left: 40rem;
-  }
-
-  @media #{$tablet} {
-    left: 32rem;
-  }
-
-  @media #{$mobile} {
-    top: -3rem;
-    left: 4rem;
-  }
 }
 
-.card-3::before {
+.card__title-3::before {
   content: '03';
 }
 
@@ -135,6 +110,7 @@
     font-size: 2rem;
   }
 }
+
 
 .card__text {
   line-height: 1.7;

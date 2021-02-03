@@ -103,7 +103,7 @@ select {
   }
 }
 .page__screen:last-child {
-  flex: 1 0;
+  flex: 1 0 40%;
 }
 @media (max-width: 767px) {
   .page__screen {

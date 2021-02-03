@@ -37,32 +37,6 @@
   }
 }
 
-.card__title-1::before,
-.card__title-2::before,
-.card__title-3::before {
-  position: absolute;
-  top: -12rem;
-  left: -5rem;
-
-  font-family: Gilroy, serif;
-  content: '01';
-  font-size: 13rem;
-  opacity: 0.1;
-
-  @media #{$mobile-sm} {
-    top: -10rem;
-    left: 0;
-  }
-}
-
-.card__title-2::before {
-  content: '02';
-}
-
-.card__title-3::before {
-  content: '03';
-}
-
 .card__content {
   margin: 7.69rem 6.26rem 7.69rem 8.24rem;
 
@@ -96,6 +70,10 @@
 .card__text,
 .card__link {
   margin-top: 1.48rem;
+  
+  @media #{$iphone5} {
+    margin-top: .5rem;
+  }
 }
 
 .card__title {
@@ -114,8 +92,43 @@
   @media #{$laptop} {
     font-size: 2rem;
   }
+
+  @media #{$iphone5} {
+    font-size: 1.5rem;
+  }
 }
 
+.card__title-1::before,
+.card__title-2::before,
+.card__title-3::before {
+  position: absolute;
+  top: -12rem;
+  left: -5rem;
+
+  font-family: Gilroy, serif;
+  content: '01';
+  font-size: 13rem;
+  opacity: 0.1;
+
+  @media #{$mobile-sm} {
+    top: -10rem;
+    left: 0;
+  }
+
+  @media #{$iphone5} {
+    font-size: 10rem;
+    top: -7rem;
+    left: -2rem;
+  }
+}
+
+.card__title-2::before {
+  content: '02';
+}
+
+.card__title-3::before {
+  content: '03';
+}
 
 .card__text {
   line-height: 1.7;
@@ -127,6 +140,10 @@
   &.active {
     opacity: 1;
     transform: translate(0, 0);
+  }
+
+  @media #{$iphone5} {
+    font-size: .9rem;
   }
 }
 
@@ -144,6 +161,10 @@
     opacity: 1;
     transform: translate(0, 0);
   }
+  @media #{$iphone5} {
+    font-size: .9rem;
+  }
+
 }
 
 .card__img {
@@ -179,5 +200,10 @@
   @media #{$mobile-sm} {
     width: 21.7rem;
     height: 27.65rem;
+  }
+
+  @media #{$iphone5} {
+    width: 18.6rem;
+    height: 23.7rem;
   }
 }

@@ -334,6 +334,11 @@ select {
     font-size: 2.5rem;
   }
 }
+@media (max-width: 322px) {
+  .start__title {
+    font-size: 2rem;
+  }
+}
 
 .start__scroll {
   display: flex;
@@ -411,34 +416,6 @@ select {
   }
 }
 
-.card__title-1::before,
-.card__title-2::before,
-.card__title-3::before {
-  position: absolute;
-  top: -12rem;
-  left: -5rem;
-  font-family: Gilroy, serif;
-  content: "01";
-  font-size: 13rem;
-  opacity: 0.1;
-}
-@media (max-width: 565px) {
-  .card__title-1::before,
-.card__title-2::before,
-.card__title-3::before {
-    top: -10rem;
-    left: 0;
-  }
-}
-
-.card__title-2::before {
-  content: "02";
-}
-
-.card__title-3::before {
-  content: "03";
-}
-
 .card__content {
   margin: 7.69rem 6.26rem 7.69rem 8.24rem;
 }
@@ -477,6 +454,13 @@ select {
 .card__link {
   margin-top: 1.48rem;
 }
+@media (max-width: 322px) {
+  .card__title,
+.card__text,
+.card__link {
+    margin-top: 0.5rem;
+  }
+}
 
 .card__title {
   font-family: "Chronicle Display", serif;
@@ -494,6 +478,48 @@ select {
     font-size: 2rem;
   }
 }
+@media (max-width: 322px) {
+  .card__title {
+    font-size: 1.5rem;
+  }
+}
+
+.card__title-1::before,
+.card__title-2::before,
+.card__title-3::before {
+  position: absolute;
+  top: -12rem;
+  left: -5rem;
+  font-family: Gilroy, serif;
+  content: "01";
+  font-size: 13rem;
+  opacity: 0.1;
+}
+@media (max-width: 565px) {
+  .card__title-1::before,
+.card__title-2::before,
+.card__title-3::before {
+    top: -10rem;
+    left: 0;
+  }
+}
+@media (max-width: 322px) {
+  .card__title-1::before,
+.card__title-2::before,
+.card__title-3::before {
+    font-size: 10rem;
+    top: -7rem;
+    left: -2rem;
+  }
+}
+
+.card__title-2::before {
+  content: "02";
+}
+
+.card__title-3::before {
+  content: "03";
+}
 
 .card__text {
   line-height: 1.7;
@@ -504,6 +530,11 @@ select {
 .card__text.active {
   opacity: 1;
   transform: translate(0, 0);
+}
+@media (max-width: 322px) {
+  .card__text {
+    font-size: 0.9rem;
+  }
 }
 
 .card__link {
@@ -518,6 +549,11 @@ select {
 .card__link.active {
   opacity: 1;
   transform: translate(0, 0);
+}
+@media (max-width: 322px) {
+  .card__link {
+    font-size: 0.9rem;
+  }
 }
 
 .card__img {
@@ -556,6 +592,12 @@ select {
   .card__img {
     width: 21.7rem;
     height: 27.65rem;
+  }
+}
+@media (max-width: 322px) {
+  .card__img {
+    width: 18.6rem;
+    height: 23.7rem;
   }
 }
 

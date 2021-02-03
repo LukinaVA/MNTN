@@ -49,6 +49,10 @@
   @media #{$mobile} {
     font-size: 2.5rem;
   }
+
+  @media #{$iphone5} {
+    font-size: 2rem;
+  }
 }
 
 .start__scroll {

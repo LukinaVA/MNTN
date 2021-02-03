@@ -1,17 +1,25 @@
-(() => {
-    'use strict';
-    const objects = document.getElementsByClassName('async-image');
-    Array.from(objects).map((item) => {
-        const img = new Image();
-        img.src = item.dataset.src;
-        img.onload = () => {
-            item.classList.remove('async-image');
-            return item.nodeName === 'IMG' ?
-                item.src = item.dataset.src :
-                item.style.backgroundImage = `url(${item.dataset.src})`;
-        };
-    });
-})();
+window.onload = function () {
+    document.body.classList.add('loaded_hiding');
+    window.setTimeout(function () {
+        document.body.classList.add('loaded');
+        document.body.classList.remove('loaded_hiding');
+    }, 500);
+}
+
+// (() => {
+//     'use strict';
+//     const objects = document.getElementsByClassName('async-image');
+//     Array.from(objects).map((item) => {
+//         const img = new Image();
+//         img.src = item.dataset.src;
+//         img.onload = () => {
+//             item.classList.remove('async-image');
+//             return item.nodeName === 'IMG' ?
+//                 item.src = item.dataset.src :
+//                 item.style.backgroundImage = `url(${item.dataset.src})`;
+//         };
+//     });
+// })();
 
 let pageSlider = new Swiper('.page', {
     wrapperClass: 'page__wrapper',

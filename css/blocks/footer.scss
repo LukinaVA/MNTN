@@ -13,6 +13,11 @@
     padding: 5rem 5rem 0;
     flex-wrap: wrap;
   }
+
+  @media #{$mobile-sm} {
+    padding: 5rem 0 0;
+    flex-wrap: wrap;
+  }
 }
 
 .footer__col-1 {

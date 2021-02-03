@@ -74,6 +74,10 @@
   @media #{$mobile} {
     font-size: .9rem;
   }
+
+  @media #{$mobile-sm} {
+    display: none;
+  }
 }
 
 .page__bullet_active {
@@ -86,7 +90,7 @@
   right: 4.3rem;
   transform: translate(0, -50%);
   width: 3px;
-  height: 30%;
+  height: 15rem;
   background: rgba(255, 255, 255, 0.5);
 
   @media #{$tablet} {
@@ -94,7 +98,7 @@
   }
 
   @media #{$mobile-sm} {
-    right: 2.3rem;
+    display: none;
   }
 }
 

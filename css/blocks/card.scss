@@ -3,12 +3,7 @@
 .card {
   display: flex;
 
-  //margin: 0 auto;
-
-  //max-width: 113rem;
   width: 100%;
-
-  //max-height: 56rem;
   height: 100%;
 
   align-items: center;
@@ -37,7 +32,8 @@
   }
 
   @media #{$mobile-sm} {
-    padding: 0 2rem;
+    padding: 0;
+    justify-content: center;
   }
 }
 
@@ -52,6 +48,11 @@
   content: '01';
   font-size: 13rem;
   opacity: 0.1;
+
+  @media #{$mobile-sm} {
+    top: -10rem;
+    left: 0;
+  }
 }
 
 .card__title-2::before {
@@ -84,6 +85,10 @@
 
   @media #{$tablet} {
     margin: 1.6rem;
+  }
+
+  @media #{$mobile-sm} {
+    margin: 1rem;
   }
 }
 
@@ -155,6 +160,10 @@
     @media #{$laptop} {
       margin-right: 5rem;
     }
+
+    @media #{$mobile-sm} {
+      margin-right: 0;
+    }
   }
 
   @media #{$laptop} {
@@ -165,10 +174,6 @@
   @media #{$tablet} {
     width: 24.8rem;
     height: 31.6rem;
-  }
-
-  @media #{$mobile} {
-    margin-left: 2.6rem;
   }
 
   @media #{$mobile-sm} {

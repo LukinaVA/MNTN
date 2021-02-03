@@ -76,3 +76,11 @@ function animateScroll() {
 }
 
 setTimeout(animateScroll, 300);
+
+const headerNav = document.documentElement.querySelector('.header__nav');
+const burgerMenu = document.documentElement.querySelector('.burger-menu');
+
+burgerMenu.addEventListener('click', () => {
+    burgerMenu.classList.toggle('active');
+    headerNav.classList.toggle('active');
+});

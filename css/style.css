@@ -94,14 +94,6 @@ select {
   flex: 1 0 100%;
   padding: 0 4.3rem;
 }
-.page__screen:first-child {
-  padding-top: 3.5rem;
-}
-@media (max-width: 767px) {
-  .page__screen:first-child {
-    padding-top: 1rem;
-  }
-}
 .page__screen:last-child {
   flex: 1 0 40%;
 }
@@ -223,6 +215,12 @@ select {
 .header {
   display: flex;
   justify-content: space-between;
+  padding-top: 3.5rem;
+}
+@media (max-width: 767px) {
+  .header {
+    padding-top: 1rem;
+  }
 }
 
 .logo {
@@ -693,9 +691,9 @@ select {
 }
 
 .burger-menu {
+  display: none;
   width: 30px;
   padding: 10px 0;
-  display: none;
   font-size: 0;
   color: transparent;
   border: 0;

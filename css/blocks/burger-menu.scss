@@ -1,9 +1,10 @@
 @import "../vars";
 
 .burger-menu {
+  display: none;
+
   width: 30px;
   padding: 10px 0;
-  display: none;
 
   font-size: 0;
   color: transparent;

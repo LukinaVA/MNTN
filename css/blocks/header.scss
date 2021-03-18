@@ -3,6 +3,12 @@
 .header {
   display: flex;
   justify-content: space-between;
+
+  padding-top: 3.5rem;
+
+  @media #{$mobile} {
+    padding-top: 1rem;
+  }
 }
 
 .logo {

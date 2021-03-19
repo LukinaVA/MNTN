@@ -1,5 +1,10 @@
 # MNTN
-* БЭМ методология
-* препроцессор SCSS
-* JS [Swiper]
-* адаптивная вёрстка
+
+Adaptive landing page.
+
+Technology stack:
+* JavaScript
+* Swiper library
+* BEM
+* SCSS
+
